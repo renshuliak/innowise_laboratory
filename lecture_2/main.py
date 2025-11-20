@@ -21,3 +21,11 @@ user_name = input("Enter your full name: ")
 birth_year_str = input("Enter your birth year: ")
 birth_year = int(birth_year_str)
 current_age = 2025 - birth_year
+
+# Collect hobbies
+hobbies = []
+while True:
+    hobby_input = input("Enter a favorite hobby or type 'stop' to finish: ")
+    if hobby_input.lower() == "stop":
+        break
+    hobbies.append(hobby_input)
