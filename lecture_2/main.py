@@ -29,3 +29,27 @@ while True:
     if hobby_input.lower() == "stop":
         break
     hobbies.append(hobby_input)
+
+# Process and generate the profile
+life_stage = generate_profile(current_age)
+user_profile = {
+    "name": user_name,
+    "age": current_age,
+    "life_stage": life_stage,
+    "hobbies": hobbies
+}
+
+# Display the output
+print("\n---")
+print("Profile Summary:")
+print(f"Name: {user_profile['name']}")
+print(f"Age: {user_profile['age']}")
+print(f"Life Stage: {user_profile['life_stage']}")
+
+if len(user_profile['hobbies']) == 0:
+    print("You didn't mention any hobbies.")
+else:
+    print(f"Favorite Hobbies ({len(user_profile['hobbies'])}):")
+    for hobby in user_profile['hobbies']:
+        print(f"- {hobby}")
+print("---")
