@@ -15,11 +15,9 @@ def generate_profile(age: int) -> str:
     else:
         return "Adult"
 
-def main():
-    age = int(input("Enter your age: "))
-    profile = generate_profile(age)
-    print(f"You are a {profile}")
 
-if __name__ == "__main__":
-    main()
-    
+# Get user input
+user_name = input("Enter your full name: ")
+birth_year_str = input("Enter your birth year: ")
+birth_year = int(birth_year_str)
+current_age = 2025 - birth_year
